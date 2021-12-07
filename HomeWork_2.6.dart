@@ -11,7 +11,7 @@ class DelimetersCalculator {
       throw 'Деление на ноль!';
     }
 
-    MethodGcd(num1, num2);
+    _MethodGcd(num1, num2);
 
     if (method == "gcd")
       print("НОД = $gcd");
@@ -22,12 +22,12 @@ class DelimetersCalculator {
       print("Метод не поддерживается!");
   }
 
-  MethodGcd(int n1, int n2) {
+  _MethodGcd(int n1, int n2) {
     modulo = n1 % n2;
     if (modulo == 0) {
       gcd = n2;
     } else
-      MethodGcd(n2, modulo);
+      _MethodGcd(n2, modulo);
   }
 }
 
@@ -145,9 +145,9 @@ class Point {
 
 // Задание 7: Вычисление корня любой заданной степени из числа
 extension on num {
-  num getRoot(num other) => extractRoot(this, other);
+  num getRoot(num other) => _extractRoot(this, other);
 
-  extractRoot(num number, num rootDegree) {
+  _extractRoot(num number, num rootDegree) {
     final accuracy = 0.0001;
     double temp;
 
