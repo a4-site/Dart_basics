@@ -2,10 +2,9 @@ import 'dart:math';
 
 // Задание 1: НОД и НОК
 class DelimetersCalculator {
-  late int gcd;
-  late int lcm;
-  late int modulo;
-  late int temp;
+  var gcd;
+  var modulo;
+  var temp;
 
   DelimetersCalculator(int num1, int num2, String method) {
     if (num1 == 0 || num2 == 0) {
@@ -17,7 +16,7 @@ class DelimetersCalculator {
     if (method == "gcd")
       print("НОД = $gcd");
     else if (method == "lcm") {
-      lcm = (num1 * num2) ~/ gcd;
+      var lcm = (num1 * num2) ~/ gcd;
       print("НОK = $lcm");
     } else
       print("Метод не поддерживается!");
